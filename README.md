@@ -22,13 +22,7 @@ Technologies Used:
 
 Getting Started
 
-*Assuming that Node is already installed on your PC.
-
-To get the project running on your PC you have to first get the clone
-url: https://github.com/kumarkekse/react-saga-node-task.git
-
-Then you have to do "npm install" inside the project directory.
-
-Then "npm start" to start the project.
+The app is deployed you can check it by clicking the url
+- https://react-saga-node-task.herokuapp.com
 
 Note- Any feedbacks for improvement are appreciated.
