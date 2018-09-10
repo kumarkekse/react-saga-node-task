@@ -25,7 +25,7 @@ Getting Started
 *Assuming that Node is already installed on your PC.
 
 To get the project running on your PC you have to first get the clone
-url: https://github.com/muraree/react-jwt-node-task.git
+url: https://github.com/kumarkekse/react-saga-node-task.git
 
 Then you have to do "npm install" inside the project directory.
 
