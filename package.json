@@ -8,6 +8,7 @@
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "express-favicon": "^2.0.1",
     "jsonwebtoken": "^8.3.0",
     "mongoose": "^5.2.4",
     "nodemon": "^1.18.3",
@@ -20,7 +21,7 @@
     "redux-saga": "^0.16.0"
   },
   "scripts": {
-    "start": "react-scripts start | node ./server/server.js",
+    "start": "node ./server/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
