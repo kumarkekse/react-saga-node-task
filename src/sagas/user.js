@@ -82,7 +82,6 @@ export function* watchDeleteUser(){
 }
 
 function* getDeleteUser(data){
-  debugger;
   const payload = yield call(api.remove,`/users/${data.payload}`);
   payload.id = data.payload;
   yield put({ type: 'DELETE_USER', payload });
