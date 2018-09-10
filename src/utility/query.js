@@ -1,5 +1,5 @@
 import axios from "axios";
-const baseUrl = "http://localhost:8000";
+const baseUrl = "https://react-saga-node-task.herokuapp.com";
 
 const get = (url) => {
   return axios.get(`${baseUrl}${url}`,{ headers:{"x-access-token": window.localStorage.getItem("token")}})
