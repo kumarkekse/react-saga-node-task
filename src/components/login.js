@@ -1,5 +1,4 @@
 import React from "react"
-import './styles/login.css'
 
 class Login extends React.Component {
 
@@ -18,16 +17,18 @@ class Login extends React.Component {
   render() {
     return(
       <div className="container">
-        <h1>Login</h1><br/>
-        {!this.props.user.message ? "" :<div className="alert alert-danger"><strong>{this.props.user.message}</strong></div>}
-        <label><b>Email</b></label>
-        <input type="text" ref="email" placeholder="Enter Email" name="email" required/>
+        <div className="card card-container">
+          <h1>Login</h1><br/>
+          {!this.props.user.message ? "" :<div className="alert alert-danger"><strong>{this.props.user.message}</strong></div>}
+          <label><b>Email</b></label>
+          <input type="text" ref="email" placeholder="Enter Email" name="email" required/>
 
-        <label><b>Password</b></label>
-        <input type="password" ref="password" placeholder="Enter Password" name="psw" required/>
+          <label><b>Password</b></label>
+          <input type="password" ref="password" placeholder="Enter Password" name="psw" required/>
 
-        <button type="submit" className="btn btn-lg btn-success" onClick={this.handleSubmit}>Login</button>
-        <h4>Don't have an account? <a className="text-info" href="/register">Sign up</a></h4>
+          <button type="submit" className="btn btn-lg btn-success" onClick={this.handleSubmit}>Login</button>
+          <h4>Don't have an account? <a className="text-info" href="/register">Sign up</a></h4>
+        </div>
       </div>
     );
   }

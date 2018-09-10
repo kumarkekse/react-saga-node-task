@@ -8,7 +8,7 @@ import './styles/index.css'
 
 class App extends Component {
 
-  async componentWillMount () {
+  componentDidMount () {
     if(window.localStorage.getItem("token")){
       this.props.fetchCurrentUser();
     }

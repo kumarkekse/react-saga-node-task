@@ -19,11 +19,9 @@ class usersList extends React.Component {
 
   render(){
     return(
-      <div>
-      <div>
-        <label>Filter</label>
-        <input onChange={this.handleFilter} type="text" />
-        <table className="table table-striped table-bordered table-list">
+      <div className="well well-lg">
+        <input placeholder="Enter your text here to search by name..." onChange={this.handleFilter} type="text" />
+        <table className="table table-bordered">
           <thead>
             <tr>
               <th><em className="fa fa-cog"></em></th>
@@ -31,21 +29,20 @@ class usersList extends React.Component {
               <th>Email</th>
             </tr> 
           </thead>
-        <tbody>
-          {this.props.users.map((user) =>(
-            <tr>
-              <td align="center">
-                <a id={user._id} onClick={this.props.handleEdit} className="btn btn-default">Edit</a>
-                <a id={user._id} onClick={this.props.handleDelete} className="btn btn-danger">delete</a>
-              </td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-            </tr>
-          ))}
-        </tbody>
+          <tbody>
+            {this.props.users.map((user) =>(
+              <tr>
+                <td align="center">
+                  <button id={user._id} onClick={this.props.handleEdit} className="btn btn-primary"><span className="glyphicon glyphicon-edit"></span> Edit</button>
+                  <button id={user._id} onClick={this.props.handleDelete} className="btn btn-danger"> <span className="glyphicon glyphicon-remove"></span>delete</button>
+                </td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
-    </div>
     );
   }
 }

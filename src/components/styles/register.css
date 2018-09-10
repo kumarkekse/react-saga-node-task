@@ -2,7 +2,10 @@
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  padding-top: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background: lightgrey;
 }
 
 /* Full-width input fields */
@@ -12,11 +15,11 @@ input[type=text], input[type=password] {
   margin: 5px 0 22px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background-color: lemonchiffon;
 }
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: linen;
   outline: none;
 }
 
@@ -44,5 +47,23 @@ a {
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
   background-color: #f1f1f1;
+  text-align: center;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.btn {
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+
+#admin {
   text-align: center;
 }

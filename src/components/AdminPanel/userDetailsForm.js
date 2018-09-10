@@ -1,5 +1,4 @@
 import React from 'react'
-import api from  "../../utility/query"
 
 class userDetailsForm extends React.Component {
   constructor(props){
@@ -24,7 +23,7 @@ class userDetailsForm extends React.Component {
 
   render(){
     return(
-      <div>
+      <div className="well well-lg">
         <h1>{this.props.createUser ? 'Create User' : 'Update User'}</h1>
   
         <label><b>Name</b></label>
@@ -45,7 +44,7 @@ class userDetailsForm extends React.Component {
         </div>)
         }
         <hr/>
-        <button className="btn btn-lg btn-success adminlistCreate" type="submit" onClick={this.handleSubmit}>{this.props.createUser ? 'Create User' : 'Update User'}</button>
+        <button className="btn btn-lg btn-success" type="submit" onClick={this.handleSubmit}>{this.props.createUser ? 'Create User' : 'Update User'}</button>
       </div>
     );
   }

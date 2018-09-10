@@ -55,26 +55,22 @@ class AdminPanel extends React.Component {
   render(){
     const showListUsers = !this.state.showCreateNewUser && !this.state.showEditUser;
     return(
-      <div className="container">
+      <div className="container-fluid">
+        <button className="btn btn-lg btn-success" onClick={this.handleLogout}>Logout</button>
         <div className="row">
-          <button className="btn btn-lg btn-warning" onClick={this.handleLogout}>Logout</button>
-          <h1>Admin Panel</h1>
           <div className="col-md-10 col-md-offset-1">
             <div className="panel panel-default panel-table">
+              <h1 id="admin">Admin Panel</h1>
               <div className="panel-heading">
-                <div className="row">
-                  <div className="col col-xs-6">
-                    <button type="button" onClick={() => this.setState({showCreateNewUser: false, showEditUser: false})} className="btn btn-lg btn-info adminlistCreate">List Users</button>
-                  </div>
-                  <div className="col col-xs-6 text-right">
-                    <button type="button" onClick={this.handleCreate} className="btn btn-lg btn-info adminlistCreate">Create New</button>
-                  </div>
+                <div className="btn-group btn-group-justified">
+                  <a onClick={() => this.setState({showCreateNewUser: false, showEditUser: false})} className="btn">List Users</a>
+                  <a onClick={this.handleCreate} className="btn">Create New</a>
                 </div>
               </div>
               <div className="panel-body">
-                {  showListUsers && <UsersList {...this.props} fetchUsers={this.props.fetchUsers} fetchFilteredUsers={this.props.fetchFilteredUsers} users={this.state.pageUsers} handleDelete={this.handleDelete} handleEdit={this.handleEdit} /> }
-                {  this.state.showCreateNewUser && <UserDetailsForm createUser fetchNewUser={this.props.fetchNewUser}/> }
-                {  this.state.showEditUser && <UserDetailsForm editUser fetchUsers={this.props.fetchUsers} fetchUpdateUser={this.props.fetchUpdateUser} user={this.state.updateUser}/> }
+                { showListUsers && <UsersList {...this.props} fetchUsers={this.props.fetchUsers} fetchFilteredUsers={this.props.fetchFilteredUsers} users={this.state.pageUsers} handleDelete={this.handleDelete} handleEdit={this.handleEdit} /> }
+                { this.state.showCreateNewUser && <UserDetailsForm createUser fetchNewUser={this.props.fetchNewUser}/> }
+                { this.state.showEditUser && <UserDetailsForm editUser fetchUsers={this.props.fetchUsers} fetchUpdateUser={this.props.fetchUpdateUser} user={this.state.updateUser}/> }
                 { showListUsers && <Pagination items={this.props.users} onChangePage={this.onChangePage }/>}
               </div>
             </div>
