@@ -25,4 +25,12 @@ Getting Started
 The app is deployed you can check it by clicking the url
 - https://react-saga-node-task.herokuapp.com
 
+Admin user credentials for login are:
+
+EMAIL:
+- ashish@mailinator.com
+
+PASSWORD:
+- 123
+
 Note- Any feedbacks for improvement are appreciated.
